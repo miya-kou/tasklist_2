@@ -1,0 +1,20 @@
+<% if logged_in? %>
+  <p>ログイン完了ユーザ: <%= current_user.name %></p>
+  <%= link_to '新規作成', new_task_path %>
+  <table class="table">
+    <tr>
+      <th>id</th>
+      <th>タイトル</th>
+      <th>メッセージ</th>
+    </tr>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= link_to task.id, task %></td>
+        <td><%= task. status%></td>
+        <td><%= task.content %></td>
+      </tr>
+    <% end %>
+  </table>
+<% else %>
+ 
+<% end %>
